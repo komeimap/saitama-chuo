@@ -22,14 +22,6 @@
 
     //     ga('create', 'UA-97988312-1', 'auto');
     //     ga('send', 'pageview');
-    var ua = window.navigator.userAgent;
-    ua = ua.toLowerCase().trim();
-    if (ua.includes(' line/')) {
-      alert("LINEブラウザです");
-    } else {
-      alert("LINEブラウザではありません");
-    }
-
     </script>
 
 </head>
@@ -37,7 +29,7 @@
 
 <body>
     <input type="checkbox" name="toggle" id="toggle" checked=false/>
-    <h4>&nbsp;井上しんいち 実績マップ</h4>
+    <h4 id="test">&nbsp;井上しんいち 実績マップ</h4>
     <a href="images/p9.jpg" download="p9.jpg">
       <img src="images/p9.jpg" class="imgcard">
       <img src="images/home.png" alt="カードをダウンロード">
@@ -113,6 +105,15 @@
        //titleShow : false,
        //infobar : true,
 	  });
+
+    var ua = window.navigator.userAgent;
+    ua = ua.toLowerCase().trim();
+    if (ua.includes(' line/')) {
+      $("#test").text("LINEブラウザです");
+    } else {
+      $("#test").text("LINEブラウザではありません");
+    }
+
 </script>
 </body>
 
