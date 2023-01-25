@@ -110,6 +110,7 @@
     ua = ua.toLowerCase().trim();
     if (ua.includes(' line/')) {
       $("#test").text("LINEブラウザです");
+      window.location.href = 'https://komeimap.github.io/saitama-line?openExternalBrowser=1';
     } else {
       $("#test").text("LINEブラウザではありません");
     }
